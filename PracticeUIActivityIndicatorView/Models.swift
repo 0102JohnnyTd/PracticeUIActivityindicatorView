@@ -9,5 +9,4 @@ import Foundation
 
 struct UserModel: Decodable {
     let name: String
-    let image: String
 }

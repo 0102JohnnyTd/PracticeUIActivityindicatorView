@@ -16,9 +16,7 @@ final class ViewController: UIViewController {
         }
     }
 
-    @IBOutlet private weak var pokemonImage: UIImageView!
-
-    @IBOutlet private weak var pokemonNameLabel: UILabel!
+    @IBOutlet weak var userNameLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +45,7 @@ extension ViewController: UISearchBarDelegate {
         Task {
             do {
                 let result = try await FetchAPI.fetchData(url: url)
-                pokemonNameLabel.text = result.name
+                userNameLabel.text = result.name
                 stopIndicator()
             } catch {
                 print(error)
