@@ -39,7 +39,7 @@ final class ViewController: UIViewController {
 }
 
 extension ViewController: UISearchBarDelegate {
-    func searchGitHubUser(_ searchBar: UISearchBar) {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let text = searchBar.text,
                 !text.isEmpty,
                 let url = URL(string: "https://api.github.com/users/\(text)") else { return }
