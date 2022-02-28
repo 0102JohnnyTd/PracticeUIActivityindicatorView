@@ -10,7 +10,11 @@ import UIKit
 final class ViewController: UIViewController {
     @IBOutlet private weak var indicator: UIActivityIndicatorView!
 
-    @IBOutlet private weak var searchBar: UISearchBar!
+    @IBOutlet private weak var searchBar: UISearchBar! {
+        didSet {
+            searchBar.delegate = self
+        }
+    }
 
     @IBOutlet private weak var pokemonImage: UIImageView!
 
@@ -18,6 +22,7 @@ final class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        indicator.isHidden = true
     }
 
     private func startIndicator() {
@@ -30,5 +35,24 @@ final class ViewController: UIViewController {
         indicator.stopAnimating()
         indicator.hidesWhenStopped = true
         view.alpha = 1.0
+    }
+}
+
+extension ViewController: UISearchBarDelegate {
+    func searchGitHubUser(_ searchBar: UISearchBar) {
+        guard let text = searchBar.text,
+                !text.isEmpty,
+                let url = URL(string: "https://api.github.com/users/\(text)") else { return }
+        startIndicator()
+        Task {
+            do {
+                let result = try await FetchAPI.fetchData(url: url)
+                pokemonNameLabel.text = result.name
+                stopIndicator()
+            } catch {
+                print(error)
+                stopIndicator()
+            }
+        }
     }
 }
