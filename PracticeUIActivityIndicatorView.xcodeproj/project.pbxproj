@@ -13,6 +13,9 @@
 		1C79BB0027CA184900AF5DBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C79BAFE27CA184900AF5DBA /* Main.storyboard */; };
 		1C79BB0227CA184D00AF5DBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C79BB0127CA184D00AF5DBA /* Assets.xcassets */; };
 		1C79BB0527CA184D00AF5DBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C79BB0327CA184D00AF5DBA /* LaunchScreen.storyboard */; };
+		1C79BB1527CCB05700AF5DBA /* FetchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C79BB1327CCB05700AF5DBA /* FetchAPI.swift */; };
+		1C79BB1627CCB05700AF5DBA /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C79BB1427CCB05700AF5DBA /* Models.swift */; };
+		1C79BB1827CCB0B400AF5DBA /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C79BB1727CCB0B400AF5DBA /* APIError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		1C79BB0127CA184D00AF5DBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C79BB0427CA184D00AF5DBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C79BB0627CA184D00AF5DBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C79BB1327CCB05700AF5DBA /* FetchAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchAPI.swift; sourceTree = "<group>"; };
+		1C79BB1427CCB05700AF5DBA /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		1C79BB1727CCB0B400AF5DBA /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 			children = (
 				1C79BAF827CA184900AF5DBA /* AppDelegate.swift */,
 				1C79BAFA27CA184900AF5DBA /* SceneDelegate.swift */,
+				1C79BB1327CCB05700AF5DBA /* FetchAPI.swift */,
+				1C79BB1727CCB0B400AF5DBA /* APIError.swift */,
+				1C79BB1427CCB05700AF5DBA /* Models.swift */,
 				1C79BAFC27CA184900AF5DBA /* ViewController.swift */,
 				1C79BAFE27CA184900AF5DBA /* Main.storyboard */,
 				1C79BB0127CA184D00AF5DBA /* Assets.xcassets */,
@@ -160,8 +169,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C79BAFD27CA184900AF5DBA /* ViewController.swift in Sources */,
+				1C79BB1527CCB05700AF5DBA /* FetchAPI.swift in Sources */,
 				1C79BAF927CA184900AF5DBA /* AppDelegate.swift in Sources */,
 				1C79BAFB27CA184900AF5DBA /* SceneDelegate.swift in Sources */,
+				1C79BB1627CCB05700AF5DBA /* Models.swift in Sources */,
+				1C79BB1827CCB0B400AF5DBA /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

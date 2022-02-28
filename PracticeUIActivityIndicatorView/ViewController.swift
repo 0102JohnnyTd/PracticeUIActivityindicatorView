@@ -18,6 +18,17 @@ final class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    }
+
+    private func startIndicator() {
+        indicator.isHidden = false
+        indicator.startAnimating()
+        view.alpha = 0.5
+    }
+
+    private func stopIndicator() {
+        indicator.stopAnimating()
+        indicator.hidesWhenStopped = true
+        view.alpha = 1.0
     }
 }
